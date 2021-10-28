@@ -24,6 +24,7 @@ public:
         }
         else
         {
+            t->data=x;
             t->next = top;
             top = t;
         }
@@ -39,7 +40,7 @@ public:
         {
             node *t = top;
             top = top->next;
-            int x = t->data;
+            char x = t->data;
             delete t;
             return x;
         }
@@ -72,6 +73,6 @@ public:
 int main()
 {
     stack st;
-    char *s = "(a+b)+(x+v))";
+    char *s = "(a+b)*(x+v)";
     cout << st.isbalenced(s);
 }
